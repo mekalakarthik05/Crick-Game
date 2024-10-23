@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hand Cricket Game</title>                                                                                                             
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Hand Cricket Game</h1>
+    <button id="startButton" onclick="startGame()">Start Game</button>
+    <div id="gameArea" style="display: none;">
+        <button onclick="exitGame()">Back</button>
+        <p>Total Score: <span id="totalScore">0</span></p>
+        <p id="prompt">Choose a number:</p>
+        <div id="numberButtons">
+            <!-- Circular buttons for numbers -->
+            <button class="numberButton" onclick="playGame(0)">0</button>
+            <button class="numberButton" onclick="playGame(1)">1</button>
+            <button class="numberButton" onclick="playGame(2)">2</button>
+            <button class="numberButton" onclick="playGame(3)">3</button>
+            <button class="numberButton" onclick="playGame(4)">4</button>
+            <button class="numberButton" onclick="playGame(6)">6</button>
+        </div>
+        <p id="result"></p>
+        <p id="error" style="color: red;"></p> <!-- Error message element -->
+    </div>
+</div>
+<!-- Custom modal for play again prompt -->
+<div id="playAgainModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p id="finalScore"></p>
+        <p>Play again?</p>
+        <button onclick="confirmPlayAgain(true)">Yes</button>
+        <button onclick="confirmPlayAgain(false)">No</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
